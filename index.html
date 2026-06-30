@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>64.701.236 JAIME LUIS ZANATA FLORES</title>
+  <meta name="og:title" content="64.701.236 JAIME LUIS ZANATA FLORES" />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="64.701.236 JAIME LUIS ZANATA FLORES" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0f4d3c;
+      --accent: #d4a017;
+      --light-bg: #f4f7f5;
+      --white: #ffffff;
+      --text: #1a201d;
+      --muted: #5a6660;
+      --border: #dbe5df;
+      --footer-bg: #0a2e23;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 60px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .nav-brand .logo-initial {
+      background: var(--accent);
+      color: var(--primary);
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .btn-nav {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.35rem 0.9rem;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+    #home {
+      background: linear-gradient(135deg, var(--primary) 0%, #1c7a5e 100%);
+      color: var(--white);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    #home h1 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+    #home p {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #b88a12; }
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+
+    /* SECTIONS */
+    section { padding: 4rem 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      line-height: 1.25;
+    }
+    p { color: var(--muted); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* SOBRE */
+    #sobre { background: var(--light-bg); }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+    @media (max-width: 640px) { .sobre-grid { grid-template-columns: 1fr; } }
+    .sobre-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .sobre-box h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+    .sobre-box p { font-size: 0.95rem; }
+
+    /* SERVIÇOS */
+    #servicos { background: var(--white); }
+    .services-list {
+      list-style: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    .services-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .services-list li::before {
+      content: "✔";
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* DADOS */
+    #dados { background: var(--light-bg); }
+    .dados-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .dados-table tr { border-bottom: 1px solid var(--border); }
+    .dados-table tr:last-child { border-bottom: none; }
+    .dados-table td {
+      padding: 0.85rem 1.1rem;
+      font-size: 0.93rem;
+    }
+    .dados-table td:first-child {
+      font-weight: 700;
+      color: var(--primary);
+      width: 38%;
+      background: #e9f1ed;
+    }
+    .dados-table td:last-child { color: var(--text); }
+
+    /* RESPONSÁVEL */
+    #socios { background: var(--white); }
+    .socio-card {
+      margin-top: 2rem;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .socio-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .socio-card h3 { font-size: 1rem; color: var(--primary); margin-bottom: 0.2rem; }
+    .socio-card p { font-size: 0.9rem; margin-bottom: 0; }
+
+    /* MISSÃO */
+    #missao { background: var(--primary); color: var(--white); }
+    #missao h2 { color: var(--white); }
+    #missao p { color: rgba(255,255,255,0.82); }
+    .missao-highlight {
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.08);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.2rem 1.4rem;
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* CONTATO */
+    #contato-section { background: var(--light-bg); }
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 800px) { .contato-grid { grid-template-columns: 1fr; } }
+    .contato-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+    }
+    .contato-card h3 { font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .contato-card p { font-size: 0.93rem; }
+    .contato-card a { color: var(--accent); text-decoration: none; }
+
+    /* FOOTER */
+    footer {
+      background: var(--footer-bg);
+      color: rgba(255,255,255,0.6);
+      padding: 2rem;
+      font-size: 0.82rem;
+      text-align: center;
+      line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,0.85); }
+    .footer-links {
+      margin-top: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.85); }
+    .back-top {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: var(--white);
+      border-radius: 10px;
+      max-width: 660px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+    }
+    .modal-box h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .modal-box h3 { font-size: 0.95rem; color: var(--accent); margin: 1.2rem 0 0.4rem; }
+    .modal-box p, .modal-box li { font-size: 0.88rem; color: var(--muted); }
+    .modal-box ul { padding-left: 1.2rem; }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: none; border: none;
+      font-size: 1.3rem; cursor: pointer; color: var(--muted);
+    }
+
+    /* MOBILE NAV */
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      nav { padding: 0 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="home">
+  <a class="nav-brand" href="#home">
+    <span class="logo-initial">J</span>
+    JAIME LUIS ZANATA FLORES
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#dados">Dados oficiais</a></li>
+    <li><a href="https://wa.me/5511991376414?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-nav" target="_blank" rel="noopener">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero-section">
+  <div id="home" style="padding:5rem 2rem 4rem; background:linear-gradient(135deg, #0f4d3c 0%, #1c7a5e 100%); color:#fff; text-align:center;">
+    <h1>64.701.236 JAIME LUIS ZANATA FLORES</h1>
+    <p>Nossa missão é oferecer serviços de malote e transporte de passageiros com agilidade, segurança e compromisso, atendendo clientes e parceiros em Canoas/RS e região.</p>
+    <p style="color:rgba(255,255,255,0.85); max-width:680px; margin:0 auto 2rem;">Trabalhamos com pontualidade, organização e atendimento próximo, transformando cada serviço prestado em uma relação de confiança duradoura.</p>
+    <div class="hero-btns">
+      <a href="#servicos" class="btn-primary">Ver serviços</a>
+      <a href="https://wa.me/5511991376414?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="btn-secondary" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container">
+    <div class="section-label">QUEM SOMOS?</div>
+    <h2>Quem somos</h2>
+    <p>A empresa <strong>64.701.236 JAIME LUIS ZANATA FLORES</strong>, registrada sob o CNPJ 64.701.236/0001-38 e com início de atividades em 25/01/2026, está localizada em Canoas/RS.</p>
+    <p>A empresa atua no segmento de serviços de malote não realizados pelo Correio Nacional, além de prestar serviço de transporte de passageiros por meio de locação de automóveis com motorista. Conforme seu cadastro público, é enquadrada como Microempreendedor Individual (MEI), constituída sob a natureza jurídica de Empresário (Individual).</p>
+    <div class="sobre-grid">
+      <div class="sobre-box">
+        <h3>Nossa atuação</h3>
+        <p>Atuamos com responsabilidade, pontualidade e atenção às necessidades de cada cliente, unindo agilidade no transporte de documentos e malotes com um serviço de transporte de passageiros seguro e confortável.</p>
+      </div>
+      <div class="sobre-box">
+        <h3>Endereço cadastral</h3>
+        <p>Avenida Farroupilha, 1758<br>Niterói<br>Canoas – RS, CEP 92110-256</p>
+        <p style="margin-top:0.8rem;">Valorizamos relações transparentes, comunicação direta e compromisso com a entrega de cada serviço.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-label">O QUE FAZEMOS</div>
+    <h2>Nossos serviços</h2>
+    <ul class="services-list">
+      <li>Serviços de malote não realizados pelo Correio Nacional</li>
+      <li>Serviço de transporte de passageiros — locação de automóveis com motorista</li>
+      <li>Atendimento profissional e personalizado</li>
+      <li>Pontualidade e segurança em cada deslocamento</li>
+      <li>Suporte e agilidade para clientes e parceiros</li>
+      <li>Processos organizados e transparentes</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DADOS OFICIAIS -->
+<section id="dados">
+  <div class="container">
+    <div class="section-label">REGISTRO PÚBLICO</div>
+    <h2>Dados oficiais</h2>
+    <table class="dados-table">
+      <tr><td>Razão Social</td><td>64.701.236 Jaime Luis Zanata Flores</td></tr>
+      <tr><td>CNPJ</td><td>64.701.236/0001-38</td></tr>
+      <tr><td>Data de Abertura</td><td>25/01/2026</td></tr>
+      <tr><td>Porte</td><td>Microempreendedor Individual (MEI)</td></tr>
+      <tr><td>Natureza Jurídica</td><td>Empresário (Individual)</td></tr>
+      <tr><td>Opção pelo MEI</td><td>Sim</td></tr>
+      <tr><td>Opção pelo Simples</td><td>Sim</td></tr>
+      <tr><td>Data Opção Simples</td><td>25/01/2026</td></tr>
+      <tr><td>Capital Social</td><td>R$ 1,00</td></tr>
+      <tr><td>Tipo</td><td>Matriz</td></tr>
+      <tr><td>Situação Cadastral</td><td>Ativa</td></tr>
+      <tr><td>Data da Situação</td><td>25/01/2026</td></tr>
+      <tr><td>Atividade Principal (CNAE)</td><td>53.20-2-01 — Serviços de malote não realizados pelo Correio Nacional</td></tr>
+      <tr><td>Atividade Secundária (CNAE)</td><td>49.23-0-02 — Serviço de transporte de passageiros - locação de automóveis com motorista</td></tr>
+      <tr><td>Endereço</td><td>Avenida Farroupilha, 1758, Niterói — Canoas – RS, CEP 92110-256</td></tr>
+      <tr><td>Telefone</td><td>(11) 99137-6414</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- RESPONSÁVEL -->
+<section id="socios">
+  <div class="container">
+    <div class="section-label">RESPONSÁVEL</div>
+    <h2>Empresário responsável</h2>
+    <div class="socio-card">
+      <div class="socio-avatar">J</div>
+      <div>
+        <h3>Jaime Luis Zanata Flores</h3>
+        <p>Empresário Individual — Responsável pela empresa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO -->
+<section id="missao">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,0.6);">NOSSA MISSÃO</div>
+    <h2>Nossa missão</h2>
+    <p>A missão da 64.701.236 Jaime Luis Zanata Flores é oferecer serviços de malote e transporte de passageiros com agilidade, segurança e compromisso, atendendo clientes e parceiros em Canoas/RS e região.</p>
+    <div class="missao-highlight">
+      Nosso compromisso é transformar pontualidade, organização e proximidade no atendimento em resultados consistentes, sempre com foco em qualidade, confiança e crescimento sustentável.
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato-section">
+  <div class="container">
+    <div class="section-label">FALE CONOSCO</div>
+    <h2>Contato</h2>
+    <div class="contato-grid">
+      <div class="contato-card">
+        <h3>📧 Telefone</h3>
+        <p><a href="tel:+5511991376414">(11) 99137-6414</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/5511991376414?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Chamar no WhatsApp →</a></p>
+      </div>
+      <div class="contato-card">
+        <h3>✉️ E-mail</h3>
+        <p><a href="mailto:contato@jaimeluizzanataflores.com.br">contato@jaimeluizzanataflores.com.br</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>64.701.236 JAIME LUIS ZANATA FLORES</strong><br>
+  CNPJ: 64.701.236/0001-38 | Data de Abertura: 25/01/2026 | Porte: MEI | Natureza Jurídica: Empresário (Individual) | Situação Cadastral: ATIVA | Tipo: MATRIZ | Capital Social: R$ 1,00 | Endereço: Avenida Farroupilha, 1758, Niterói, Canoas – RS, CEP 92110-256 | E-mail: contato@jaimeluizzanataflores.com.br<br><br>
+  ©️ 2026 64.701.236 Jaime Luis Zanata Flores. Todos os direitos reservados.
+  <div class="footer-links">
+    <a href="#" id="privacy-link">Política de Privacidade</a>
+    <a href="#home" class="back-top">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<!-- MODAL PRIVACIDADE -->
+<div class="modal-overlay" id="privacy-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn">✕</button>
+    <h2>Política de Privacidade</h2>
+    <p><strong>64.701.236 JAIME LUIS ZANATA FLORES</strong><br>
+    CNPJ: 64.701.236/0001-38<br>
+    Endereço: Avenida Farroupilha, 1758, Niterói, Canoas – RS, CEP 92110-256</p>
+
+    <h3>1. Finalidade</h3>
+    <p>Esta Política de Privacidade descreve como a 64.701.236 Jaime Luis Zanata Flores coleta, utiliza, armazena e protege dados pessoais de clientes, parceiros, fornecedores e usuários que interagem conosco por meio de nossos canais de comunicação ou durante a contratação e execução de nossos serviços.</p>
+
+    <h3>2. Dados Coletados</h3>
+    <p>Coletamos apenas os dados necessários para as finalidades descritas nesta política, incluindo:</p>
+    <ul>
+      <li>Nome, e-mail, telefone, dados profissionais e informações empresariais (CPF ou CNPJ), quando necessário;</li>
+      <li>Registros de comunicação, contratos, propostas e histórico de atendimento;</li>
+      <li>Dados de navegação (quando aplicável), conforme políticas das plataformas utilizadas.</li>
+    </ul>
+
+    <h3>3. Uso dos Dados</h3>
+    <p>Os dados pessoais coletados são utilizados para:</p>
+    <ul>
+      <li>Prestação e gestão dos serviços contratados;</li>
+      <li>Comunicação operacional, administrativa e contratual;</li>
+      <li>Cumprimento de obrigações legais e regulatórias;</li>
+      <li>Melhoria contínua dos serviços e processos internos.</li>
+    </ul>
+
+    <h3>4. Compartilhamento de Dados</h3>
+    <p>Não comercializamos dados pessoais. O compartilhamento ocorre apenas com parceiros essenciais à execução dos serviços, mediante confidencialidade, ou quando exigido por lei, ordem judicial ou autoridade competente.</p>
+
+    <h3>5. Direitos do Titular (LGPD)</h3>
+    <p>Nos termos da LGPD (Lei nº 13.709/2018), o titular pode solicitar confirmação de tratamento, acesso, correção, anonimização, bloqueio, eliminação, portabilidade e revogação de consentimentos.</p>
+
+    <h3>6. Armazenamento e Segurança</h3>
+    <p>Adotamos medidas técnicas e administrativas adequadas para proteger os dados pessoais contra acessos não autorizados, perdas ou divulgações indevidas.</p>
+
+    <h3>7. Contato</h3>
+    <p>📞 Telefone: (11) 99137-6414<br>✉️ E-mail: contato@jaimeluizzanataflores.com.br</p>
+
+    <p style="margin-top:1.2rem; font-size:0.8rem;">64.701.236 JAIME LUIS ZANATA FLORES — CNPJ 64.701.236/0001-38 — ©️ 2026. Todos os direitos reservados.</p>
+  </div>
+</div>
+
+<script>
+  const privacyLink = document.getElementById('privacy-link');
+  const privacyModal = document.getElementById('privacy-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+
+  privacyLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    privacyModal.classList.add('active');
+  });
+  modalCloseBtn.addEventListener('click', () => {
+    privacyModal.classList.remove('active');
+  });
+  privacyModal.addEventListener('click', (e) => {
+    if (e.target === privacyModal) privacyModal.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
